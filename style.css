@@ -1,0 +1,59 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+main {
+  font-size: 16px;
+  margin: 2rem;
+}
+/* __________upper-calculation section _____ */
+#input-number {
+  text-align: right;
+  color: gray;
+  margin-top: 20px;
+  font-size: 2rem;
+}
+
+#current-result {
+  text-align: right;
+  color: rgb(55, 53, 53);
+  font-size: 2.5rem;
+  margin-top: 10px;
+  margin-bottom: 2rem;
+  /* flex-basis: 25%; */
+}
+
+#calculator {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/*_______________ utility______________   */
+
+.btn {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: rgb(173, 172, 172);
+  border: none;
+  font-size: larger;
+  flex-basis: 20%;
+  background-color: gray;
+  color: white;
+}
+
+.btn-operation {
+  background-color: rgb(224, 134, 9);
+}
+
+#btn-delete {
+  background-color: red;
+}
+
+#btn-equals {
+  width: 150px;
+  background-color: skyblue;
+}

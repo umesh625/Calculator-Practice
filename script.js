@@ -9,6 +9,7 @@ const divideBtn = document.getElementById("btn-divide");
 const multiplyBtn = document.getElementById("btn-multiply");
 const subtractBtn = document.getElementById("btn-subtract");
 const addBtn = document.getElementById("btn-add");
+const dotBtn = document.getElementById("btn-dot");
 const equalBtn = document.getElementById("btn-equal");
 let currentResult = document.getElementById("current-result");
 
@@ -28,10 +29,10 @@ const input9 = document.getElementById("num-9");
 
 const currentResultOutput = document.getElementById("current-result");
 const currentCalculationOutput = document.getElementById("current-calculation");
-function outputResult(result, text) {
-  currentResultOutput.textContent = result;
-  currentCalculationOutput.textContent = text;
-}
+// function outputResult(result, text) {
+//   currentResultOutput.textContent = result;
+//   currentCalculationOutput.textContent = text;
+// }
 /**
  * key events
  */
@@ -88,6 +89,9 @@ document.addEventListener("keydown", (event) => {
     currentResult.textContent = eval(userInput.textContent);
   } else if (event.key == "Escape") {
     userInput.textContent = "";
+  } else if (event.key === ".dot") {
+    insertTextContent(".");
+    console.log(".");
   }
 });
 
@@ -183,11 +187,18 @@ addClickEvents(resetBtn, () => {
   userInput.textContent = " ";
 });
 
+addClickEvents(dotBtn, () => {
+  console.log(".");
+  insertTextContent(dotBtn.innerText);
+});
+
+// addClickEvents(equalBtn, () => {
+//   currentResult.textContent = eval(userInput.textContent);
+// });
+
 /*
  * backspcae section
  */
 delBtn.addEventListener("click", () => {
   userInput.textContent = userInput.textContent.slice(0, -1);
 });
-
-// currentResult = eval(userInput.textContent);
